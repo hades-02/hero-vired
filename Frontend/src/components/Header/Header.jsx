@@ -1,5 +1,6 @@
 import { useContext, useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
+import { BiMenu } from "react-icons/bi";
 import DropdownMenu from "../Dropdown/Dropdown";
 import { authContext } from "../../context/AuthContext";
 
@@ -45,7 +46,7 @@ const Header = () => {
       <div className="container">
         {token !== "" && (
           <div className="flex items-center justify-between">
-            <button className="border-solid my-auto bg-transparent font-[400] text-white rounded-md text-[30px]">
+            <button className="border-solid my-auto bg-transparent font-[400] text-white rounded-md text-[30px] hidden md:block">
               &#9776; {/* Unicode for three horizontal lines */}
             </button>
 
@@ -57,8 +58,8 @@ const Header = () => {
                       to={link.path}
                       className={(navClass) =>
                         navClass.isActive
-                          ? "text-white text-[20px] leading-7 font-[600]"
-                          : "text-white text-[20px] leading-7 font-[100]"
+                          ? "sm:text-black md:text-white text-[20px] leading-7 font-[600]"
+                          : "sm:text-black md:text-white text-[20px] leading-7 font-[100]"
                       }
                     >
                       {link.display}
@@ -71,6 +72,9 @@ const Header = () => {
             <div className="flex items-center my-auto gap-4">
               <DropdownMenu />
             </div>
+            <span className="md:hidden" onClick={toggleMenu}>
+              <BiMenu className="w-8 h-8 text-white cursor-pointer" />
+            </span>
           </div>
         )}
       </div>

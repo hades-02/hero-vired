@@ -38,7 +38,7 @@ const DropdownMenu = () => {
       </button>
 
       {isOpen && (
-        <div className="w-[200px] absolute bg-white border rounded shadow-lg right-0">
+        <div className="w-[200px] absolute bg-white border rounded shadow-lg sm:left-0 right-0">
           <div>
             <button
               className="w-full px-4 text-black hover:bg-[#1D2B53] hover:text-white"
