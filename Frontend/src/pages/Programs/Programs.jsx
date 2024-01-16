@@ -50,7 +50,7 @@ const Programs = () => {
           (qualification === "Both" ||
             program.qualification === qualification) &&
           (programType === "Both" || program.programType === programType) &&
-          program.name.toLowerCase().startsWith(search.toLowerCase())
+          program.name.toLowerCase().startsWith(search.trim().toLowerCase())
       );
       setPrograms(filteredPrograms);
     }

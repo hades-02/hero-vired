@@ -39,7 +39,7 @@ const ProgramCard = ({ program }) => {
             </div>
           </div>
           <div className="w-full mt-2 lg:mt-4 flex items-center justify-between">
-            <span className="bg-[#CCF0F3] text-irisBlueColor py-1 px-2 lg:py-2 lg:px-6 text-[14px] leading-4 lg:text-[16px] lg:leading-7 font-semibold rounded">
+            <span className="bg-[#CCF0F3] text-irisBlueColor py-1 px-2 lg:px-6 text-[12px] leading-3 lg:text-[14px] lg:leading-5 font-semibold rounded">
               Last Modified <br /> {formatDate(program.modifiedAt)}
             </span>
           </div>
