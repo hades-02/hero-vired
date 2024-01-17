@@ -49,7 +49,7 @@ const AddProgram = () => {
 
       setLoading(false);
       toast.success(message);
-      navigate("/records");
+      navigate("/myPrograms");
     } catch (err) {
       setLoading(false);
       toast.error(err.message);
